@@ -9,6 +9,7 @@ const { promisify } = require('util')
 const writeFileSync = promisify(writeFile)
 const readFileSync = promisify(readFile)
 
+
 // the questions the user will be presented with. answers are collected
 inquirer.prompt([
   {
@@ -30,6 +31,21 @@ inquirer.prompt([
     type: 'input',
     message: 'Installation instructions:',
     name: 'install'
+  },
+  {
+    type: 'input',
+    message: 'List any usage requirements or stipulations',
+    name: 'usage'
+  },
+  {
+    type: 'input',
+    message: 'License information:',
+    name: 'license'
+  },
+  {
+    type: 'input',
+    message: 'Contributing...',
+    name: 'contribute'
   }
 ])
   .then(answers => {
@@ -49,6 +65,26 @@ function callGitHub (usr) {
 }
 
 function writeMD (answer) {
-  let template = 'test'
-  writeFileSync('README.md', template)
+  const { username, projectTitle, description, install, usage, license, contribute } = answer
+  const template = `
+# ${projectTitle}
+## Description
+>${description}
+## Table of Contents
+*[Installation](*installation)
+*[Usage](*usage)
+*[License](*license)
+*[Contribute](*contribute)
+*[Credits](*credits)
+
+## Installation
+>${install}
+## Usage
+>${usage}
+### License
+>${license}
+#### Contribute
+>${contribute}
+  `
+  writeFileSync('READ2ME.md', template)
 }
