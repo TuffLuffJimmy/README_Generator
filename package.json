@@ -1,0 +1,26 @@
+{
+  "name": "README_Generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "README_MACHINE.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "chalk": "^4.0.0",
+    "axois": "^0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TuffLuffJimmy/README_Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TuffLuffJimmy/README_Generator/issues"
+  },
+  "homepage": "https://github.com/TuffLuffJimmy/README_Generator#readme"
+}
