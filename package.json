@@ -5,8 +5,9 @@
   "main": "README_MACHINE.js",
   "dependencies": {
     "axios": "^0.19.2",
+    "axois": "^0.0.1-security",
     "chalk": "^4.0.0",
-    "axois": "^0.0.1-security"
+    "inquirer": "^7.1.0"
   },
   "devDependencies": {},
   "scripts": {
