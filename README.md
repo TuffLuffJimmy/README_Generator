@@ -2,11 +2,11 @@
 ## Description
 > Command line tool that allows the user to generate a comprehensive README File by answering questions
 ## Table of Contents
-*[Installation](*installation)
-*[Usage](*usage)
-*[License](*license)
-*[Contribute](*contribute)
-*[Credits](*credits)
+* [Installation](*installation)
+* [Usage](*usage)
+* [License](*license)
+* [Contribute](*contribute)
+* [Credits](*credits)
 
 ## Installation
 >simple download the git package, and install the necessary node modules

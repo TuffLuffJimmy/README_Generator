@@ -1,14 +1,11 @@
 // Required node packages
 const axios = require('axios')
-const chalk = require('chalk')
-const { readFile, writeFile } = require('fs')
+const {writeFile } = require('fs')
 const inquirer = require('inquirer')
 const { promisify } = require('util')
 
 // modifies readFile and writeFile to make them promise based
 const writeFileSync = promisify(writeFile)
-const readFileSync = promisify(readFile)
-
 
 // the questions the user will be presented with. answers are collected
 inquirer.prompt([
@@ -52,7 +49,6 @@ inquirer.prompt([
     console.log(answers)
     writeMD(answers)
     callGitHub(answers.username)
-
   })
   .catch(err => {
     console.log(err)
@@ -71,11 +67,11 @@ function writeMD (answer) {
 ## Description
 >${description}
 ## Table of Contents
-*[Installation](*installation)
-*[Usage](*usage)
-*[License](*license)
-*[Contribute](*contribute)
-*[Credits](*credits)
+* [Installation](*installation)
+* [Usage](*usage)
+* [License](*license)
+* [Contribute](*contribute)
+* [Credits](*credits)
 
 ## Installation
 >${install}
