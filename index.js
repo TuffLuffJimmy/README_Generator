@@ -1,6 +1,6 @@
 // Required node packages
 const axios = require('axios')
-const {writeFile } = require('fs')
+const { writeFile } = require('fs')
 const inquirer = require('inquirer')
 const { promisify } = require('util')
 
@@ -82,5 +82,5 @@ function writeMD (answer) {
 #### Contribute
 >${contribute}
   `
-  writeFileSync('READ2ME.md', template)
+  writeFileSync('README.md', template)
 }
